@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Tokyo, jour 1 : Narita, valises, Shibuya</title>
+<style>
+/*KIT*/
+main{max-width:680px;margin:0 auto;position:relative;z-index:1;padding:0 16px 60px}
+.hero{padding:56px 4px 20px;position:relative}
+.hero .orbe{--d:70px;position:absolute;right:6px;top:44px;animation:souffle 6s ease-in-out infinite}
+.hero h1{font-size:33px;line-height:1.08;letter-spacing:-.03em;max-width:14ch}
+.hero p{margin:16px 0 0;font-size:17px;line-height:1.5;max-width:36ch;color:var(--texte-2)}
+b{color:var(--texte)}
+section{margin:34px 0}
+section>.etiquette{display:block;margin:0 4px 10px}
+.carte{padding:20px;margin-bottom:12px}
+.carte h2{font-size:24px;letter-spacing:-.02em;line-height:1.15}
+.carte>p{margin:10px 0 0;line-height:1.55;color:var(--texte-2);font-size:16px}
+.franc{border-left:2px solid var(--pan-2);padding:14px 16px;margin:14px 0 0;color:var(--texte-2);font-size:15px;line-height:1.5;border-radius:0 var(--r-m) var(--r-m) 0;background:rgba(40,95,255,.06)}
+ul.liste{margin:12px 0 0;padding:0;list-style:none}
+ul.liste li{padding:11px 0;border-top:1px solid var(--filet);font-size:16px;line-height:1.5;color:var(--texte-2)}
+ul.liste li:first-child{border-top:0;padding-top:4px}
+.mot{display:inline-block;background:rgba(40,95,255,.08);color:var(--pan-3);border-radius:6px;padding:0 6px;font-weight:600}
+.frise{margin:12px 0 0;padding:0;list-style:none;position:relative}
+.frise::before{content:"";position:absolute;left:5px;top:10px;bottom:10px;width:1px;background:linear-gradient(180deg,var(--pan-2),rgba(40,95,255,.1))}
+.frise li{position:relative;padding:0 0 20px 26px}
+.frise li::before{content:"";position:absolute;left:0;top:7px;width:11px;height:11px;border-radius:50%;background:radial-gradient(circle,#000 0 20%,#0a1a66 45%,#285FFF 80%,#8AA8FF 100%)}
+.frise .an{font:600 13px var(--police-mono);color:var(--pan-3);letter-spacing:.06em}
+.frise h3{font-size:18px;margin:2px 0 0;line-height:1.3}
+.frise p{margin:4px 0 0;font-size:16px;line-height:1.5;color:var(--texte-2)}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.metro{font:600 11px var(--police-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--pan-3);background:rgba(40,95,255,.08);padding:6px 10px;border-radius:999px}
+.plans{font:600 13px var(--police);color:#fff;text-decoration:none;background:linear-gradient(135deg,var(--bleu-chat),var(--bleu-renard));padding:7px 14px;border-radius:999px;box-shadow:0 6px 16px -6px rgba(36,54,184,.6)}
+.chiffres{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
+.chiffres .verre{padding:14px 12px;border-radius:var(--r-l);text-align:center}
+.chiffres .gros{display:block;font-size:26px;font-weight:600;letter-spacing:-.02em;color:var(--pan-3)}
+.chiffres .petit{display:block;font-size:13px;color:var(--texte-3);margin-top:4px;line-height:1.3}
+.options{display:grid;grid-template-columns:1fr;gap:10px;margin-top:14px}
+.options .verre{padding:16px;border-radius:var(--r-l)}
+.options h3{font-size:18px;line-height:1.25}
+.options .sous{font:600 12px var(--police-mono);color:var(--pan-3);letter-spacing:.06em;text-transform:uppercase}
+.options p{margin:6px 0 0;font-size:15px;line-height:1.5;color:var(--texte-2)}
+.puces{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 0}
+.puce{background:rgba(255,255,255,.7);border:1px solid var(--filet);color:var(--texte-2);font:500 15px var(--police);padding:10px 16px;border-radius:var(--r-pilule);cursor:pointer;transition:all .3s var(--ressort);-webkit-tap-highlight-color:transparent}
+.puce.on{color:#fff;border-color:transparent;background:linear-gradient(135deg,var(--bleu-chat),var(--bleu-renard));box-shadow:0 6px 16px -6px rgba(36,54,184,.6);transform:scale(1.04)}
+.envie{display:none;margin-top:14px;font-size:16px;line-height:1.55;color:var(--texte-2)}
+.envie.vu{display:block}
+.pied{font-size:13px;color:var(--texte-3);line-height:1.6;margin:40px 4px 0}
+.pied a{color:var(--texte-3)}
+@media (max-width:420px){.hero h1{font-size:29px}.chiffres{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<main>
+  <header class="hero">
+    <span class="orbe"></span>
+    <span class="etiquette">Tour d'Asie · Tokyo · lundi 16 novembre</span>
+    <h1>Tokyo, jour 1</h1>
+    <p>Vous êtes à Narita, terminal 2, et l'hôtel ne vous prend qu'à <b>16 h</b>. Cette page vous emmène à Shibuya, pose vos valises et vous fait la première balade, dans l'ordre, heure par heure.</p>
+    <div class="chiffres">
+      <div class="verre"><span class="gros">1 h 20</span><span class="petit">Narita → Shibuya en train direct</span></div>
+      <div class="verre"><span class="gros">¥3 330</span><span class="petit">le billet, par personne</span></div>
+      <div class="verre"><span class="gros">16 h 33</span><span class="petit">coucher du soleil à Tokyo</span></div>
+    </div>
+  </header>
+
+  <section>
+    <span class="etiquette">Étape 1 · Le train</span>
+    <div class="verre carte">
+      <h2>Narita Express, direct jusqu'à Shibuya</h2>
+      <p>Le train s'appelle le <span class="mot">N'EX</span>. Il part de la gare « Narita Airport Terminal 2·3 », au sous-sol de votre terminal : suivez les panneaux « Railways ». Pas de changement, il s'arrête à Shibuya.</p>
+      <ul class="liste">
+        <li><b>Le billet.</b> Au guichet JR (JR East Travel Service Center, à côté des portillons) ou aux machines rouges. Place numérotée, on vous l'imprime. ¥3 330 chacun.</li>
+        <li><b>Pas l'aller-retour à ¥5 200.</b> Il est valable 14 jours, votre vol pour Séoul est le 1er décembre : juste trop tard.</li>
+        <li><b>Un train toutes les 30 minutes</b> environ. Prenez le prochain, il n'y a rien à optimiser.</li>
+        <li><b>Dans le train.</b> Rangez les valises dans l'espace à l'entrée du wagon (il y a un cadenas à code sur le rail). Wi-Fi gratuit à bord.</li>
+      </ul>
+      <div class="actions"><span class="metro">JR · N'EX</span><a class="plans" href="https://www.jreast.co.jp/en/multi/nex/tickets/" target="_blank" rel="noopener">Billets et horaires</a></div>
+    </div>
+  </section>
+
+  <section>
+    <span class="etiquette">Étape 2 · Les valises</span>
+    <div class="verre carte">
+      <h2>Trois façons de s'en débarrasser</h2>
+      <p>Dans l'ordre du plus simple au plus sûr. Vous arrivez à Shibuya vers 9 h : à cette heure, tout est libre.</p>
+      <div class="options">
+        <div class="verre"><span class="sous">Option A · gratuit</span><h3>La réception de l'hôtel</h3><p>Si l'hôtel est à moins de 15 minutes de Shibuya, allez-y d'abord. Au Japon, presque tous les hôtels gardent les valises avant le check-in, sans frais. Dites juste « luggage, please ».</p></div>
+        <div class="verre"><span class="sous">Option B · ¥800 la valise</span><h3>ecbo cloak, dans un commerce</h3><p>Une appli : vous réservez un café ou une boutique qui garde vos sacs la journée. Grosse valise ¥800, petit sac ¥500. Réservez dans le train pour arriver tranquilles.</p>
+          <div class="actions"><a class="plans" href="https://cloak.ecbo.io/en" target="_blank" rel="noopener">Ouvrir ecbo cloak</a></div></div>
+        <div class="verre"><span class="sous">Option C · ¥700 à ¥900</span><h3>Les casiers de la gare</h3><p>Plus de mille casiers dans la gare de Shibuya. Les grands sont rares et pleins vers midi, mais à 9 h vous en trouverez. Ils se paient avec la carte Suica ou en pièces.</p>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Station+coin+lockers" target="_blank" rel="noopener">Casiers sur Plans</a></div></div>
+      </div>
+      <div class="franc">Mettez une carte <span class="mot">Suica</span> dans Apple Wallet avant de sortir du train (app Cartes, « + », Suica). Elle paie le métro, les casiers et le konbini. Rechargez-la avec votre carte bancaire.</div>
+    </div>
+  </section>
+
+  <section>
+    <span class="etiquette">Étape 3 · La balade</span>
+    <div class="verre carte">
+      <h2>Shibuya, version tech, heure par heure</h2>
+      <p>Tout est à moins de 10 minutes à pied de la gare. Les magasins ouvrent à 10 h ou 11 h : les premières heures sont pour l'extérieur.</p>
+      <ol class="frise">
+        <li><span class="an">07 h 30</span><h3>N'EX depuis le terminal 2</h3><p>Billets, café, et c'est parti. Réservez ecbo cloak dans le train si vous prenez l'option B.</p></li>
+        <li><span class="an">09 h 00</span><h3>Arrivée à Shibuya, valises déposées</h3><p>Sortie « Hachiko ». Vous êtes au cœur du quartier.</p></li>
+        <li><span class="an">09 h 30</span><h3>Le Scramble Crossing et Hachiko</h3><p>Le carrefour le plus traversé du monde, 3 000 personnes par feu vert. Montez au Starbucks du bâtiment Tsutaya pour le voir d'en haut, un café à la main.</p>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Scramble+Crossing" target="_blank" rel="noopener">Sur Plans</a></div></li>
+        <li><span class="an">10 h 00</span><h3>Shibuya Sky</h3><p>Le toit du Scramble Square, 230 mètres, à ciel ouvert. Le plus beau point de vue de Tokyo, et le matin il y a moins de monde qu'au coucher du soleil. Réservez un créneau en ligne avant de monter, les billets sur place partent vite.</p>
+          <div class="actions"><a class="plans" href="https://www.shibuya-scramble-square.com/sky/" target="_blank" rel="noopener">Réserver Shibuya Sky</a></div></li>
+        <li><span class="an">11 h 30</span><h3>Shibuya PARCO, 6e étage</h3><p>Le cœur geek du quartier sur un seul étage : <b>Nintendo Tokyo</b>, le <b>Pokémon Center</b>, le <b>Capcom Store</b> et le Jump Shop. Les files se forment vers midi, vous y serez à l'ouverture.</p>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+PARCO" target="_blank" rel="noopener">Sur Plans</a></div></li>
+        <li><span class="an">12 h 45</span><h3>Déjeuner au Shibuya Yokocho</h3><p>Une ruelle de petits comptoirs sous Miyashita Park, chaque stand est une région du Japon. Ramen, gyoza, yakitori : vous choisissez à la vue.</p>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Yokocho" target="_blank" rel="noopener">Sur Plans</a></div></li>
+        <li><span class="an">14 h 00</span><h3>Miyashita Park, puis Bic Camera</h3><p>Le parc sur le toit, puis Bic Camera Shibuya : sept étages de téléphones, appareils photo, gadgets et objets qu'on ne voit qu'ici. Finissez par le Mega Don Quijote, le bazar ouvert 24 h/24.</p>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Shibuya+Hachiko" target="_blank" rel="noopener">Sur Plans</a></div></li>
+        <li><span class="an">15 h 15</span><h3>On récupère les valises</h3><p>Puis direction l'hôtel. À 16 h vous êtes dans la chambre, douche, et la soirée est à vous.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <span class="etiquette">Adapter selon la forme</span>
+    <div class="verre carte">
+      <h2>Vous avez dormi comment dans l'avion ?</h2>
+      <p>Touchez votre état, le plan s'ajuste.</p>
+      <div class="puces">
+        <button class="puce" data-envie="ko">Pas du tout</button>
+        <button class="puce" data-envie="moyen">Un peu</button>
+        <button class="puce" data-envie="forme">Bien, on est chauds</button>
+      </div>
+      <p class="envie" data-envie="ko">Gardez le train, le café en haut du Scramble et le PARCO. Sautez Shibuya Sky (vous le ferez un autre soir au coucher du soleil) et Bic Camera. Après le déjeuner, Miyashita Park au soleil, puis l'hôtel dès 15 h pour demander un check-in anticipé : souvent ça passe.</p>
+      <p class="envie" data-envie="moyen">Le plan tel qu'il est écrit. Une seule règle : pas de sieste avant 21 h, c'est ce qui vous cale sur l'heure du Japon dès demain.</p>
+      <p class="envie" data-envie="forme">Ajoutez Harajuku : une station de la Yamanote depuis Shibuya, ou 15 minutes à pied par la rue Cat Street. Takeshita Street, puis retour par Omotesando. Et gardez Akihabara, la vraie Mecque de la tech, pour une journée entière cette semaine.</p>
+    </div>
+  </section>
+
+  <section>
+    <span class="etiquette">Mémo</span>
+    <div class="verre carte">
+      <h2>Cinq choses à savoir avant de sortir</h2>
+      <ul class="liste">
+        <li><b>Météo.</b> Mi-novembre à Tokyo : 10 à 17 degrés, sec, ciel souvent clair. Une veste suffit, la nuit tombe à 16 h 30.</li>
+        <li><b>Argent.</b> La carte passe presque partout, mais gardez ¥5 000 en liquide. Les distributeurs des 7-Eleven acceptent les cartes étrangères.</li>
+        <li><b>Internet.</b> Vérifiez que l'eSIM Japon est active avant de quitter l'aéroport. Il y a du Wi-Fi gratuit à Narita pour la configurer.</li>
+        <li><b>Déchets.</b> Il n'y a presque pas de poubelles dans la rue. On garde ses déchets jusqu'au prochain konbini.</li>
+        <li><b>Marcher.</b> À gauche sur les trottoirs et les escaliers. Et on ne mange pas en marchant.</li>
+      </ul>
+    </div>
+  </section>
+
+  <p class="pied">Préparé le 16 novembre 2026 au matin. Tarifs vérifiés sur le site JR East et ecbo cloak le jour même. Horaires d'ouverture indicatifs : PARCO et Bic Camera 10 h ou 11 h, Shibuya Sky 10 h.</p>
+</main>
+<script>
+document.querySelectorAll('.puce').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.envie;document.querySelectorAll('.puce').forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('.envie').forEach(function(p){p.classList.toggle('vu',p.dataset.envie===k)})})});
+</script>
+</body>
+</html>
