@@ -130,6 +130,16 @@ main{max-width:680px;margin:0 auto;position:relative;z-index:1;padding:0 16px 60
 .hero p{margin:16px 0 0;font-size:17px;line-height:1.5;max-width:36ch;color:var(--texte-2)}
 b{color:var(--texte)}
 section{margin:34px 0}
+.photo{border-radius:var(--r-l);overflow:hidden;margin:14px 0 0;position:relative}
+.photo img{display:block;width:100%;height:auto;aspect-ratio:16/10;object-fit:cover}
+.photo figcaption{font-size:13px;color:var(--texte-3);padding:8px 4px 0;line-height:1.4}
+.frise .photo{margin:10px 0 6px}
+.planb{border-left:2px solid var(--pan-2);padding:12px 14px;margin:10px 0 0;color:var(--texte-2);font-size:15px;line-height:1.5;border-radius:0 var(--r-m) var(--r-m) 0;background:rgba(40,95,255,.06)}
+.planb b{color:var(--pan-3)}
+.compare{width:100%;border-collapse:collapse;margin-top:14px;font-size:15px}
+.compare th{text-align:left;font:600 12px var(--police-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--pan-3);padding:0 8px 8px 0}
+.compare td{padding:10px 8px 10px 0;border-top:1px solid var(--filet);color:var(--texte-2);vertical-align:top}
+.compare td.n{font-weight:600;color:var(--texte);white-space:nowrap;font-size:17px}
 section>.etiquette{display:block;margin:0 4px 10px}
 .carte{padding:20px;margin-bottom:12px}
 .carte h2{font-size:24px;letter-spacing:-.02em;line-height:1.15}
@@ -177,6 +187,7 @@ ul.liste li:first-child{border-top:0;padding-top:4px}
     <span class="etiquette">Tour d'Asie · Tokyo · lundi 16 novembre</span>
     <h1>Tokyo, jour 1</h1>
     <p>Vous êtes à Narita, terminal 2, et l'hôtel ne vous prend qu'à <b>16 h</b>. Vous arrivez à Shibuya vers <b>10 h</b>. Cette page vous dit exactement où mettre les valises dans la gare, puis déroule la balade heure par heure jusqu'au check-in.</p>
+    <figure class="photo"><img src="photos/scramble-square.jpg" alt="Le Scramble Crossing de Shibuya la nuit"><figcaption>Le Scramble Crossing, votre point de départ. Tout ce qui suit est à moins de 10 minutes à pied.</figcaption></figure>
     <div class="chiffres">
       <div class="verre"><span class="gros">1 h 20</span><span class="petit">Narita → Shibuya en train direct</span></div>
       <div class="verre"><span class="gros">¥1&nbsp;000</span><span class="petit">le grand casier, la journée</span></div>
@@ -196,6 +207,8 @@ ul.liste li:first-child{border-top:0;padding-top:4px}
         <li><b>Dans le train.</b> Rangez les valises dans l'espace à l'entrée du wagon (il y a un cadenas à code sur le rail). Wi-Fi gratuit à bord.</li>
       </ul>
       <div class="actions"><span class="metro">JR · N'EX</span><a class="plans" href="https://www.jreast.co.jp/en/multi/nex/tickets/" target="_blank" rel="noopener">Billets et horaires</a></div>
+      <figure class="photo"><img src="photos/nex.jpg" alt="Le Narita Express"><figcaption>Le N'EX, blanc à bande rouge et noire. C'est écrit dessus, vous ne pouvez pas vous tromper.</figcaption></figure>
+      <div class="planb"><b>Plan B, si le prochain N'EX est dans plus de 40 minutes :</b> le Limousine Bus direct pour Shibuya, ¥3&nbsp;600, 1 h 45, comptoir orange dans le hall des arrivées. Il vous dépose au pied de Shibuya Fukuras, à une minute de la gare. <b>Plan C :</b> Keisei Skyliner jusqu'à Nippori (36 min, ¥2&nbsp;580) puis Yamanote jusqu'à Shibuya (30 min, ¥210) : plus de changements, mais plus fréquent.</div>
     </div>
   </section>
 
@@ -205,8 +218,10 @@ ul.liste li:first-child{border-top:0;padding-top:4px}
       <h2>Les casiers de la gare de Shibuya, pas à pas</h2>
       <p>Il y a plus de mille casiers dans la gare. Les grands, ceux qui prennent une valise de soute, sont dans le <span class="mot">passage souterrain Tokyu</span>, appelé Shibuya Chikamichi. À 10 h, la plupart sont libres. Comptez 15 minutes, tout compris.</p>
       <ol class="frise">
-        <li><span class="an">1</span><h3>Descendre du N'EX, sortie Hachiko</h3><p>Suivez « Hachiko Exit ». Vous débouchez sur la place avec la statue du chien, face au grand carrefour.</p></li>
+        <li><span class="an">1</span><h3>Descendre du N'EX, sortie Hachiko</h3><p>Suivez « Hachiko Exit ». Vous débouchez sur la place avec la statue du chien, face au grand carrefour.</p>
+          <figure class="photo"><img src="photos/hachiko.jpg" alt="La statue de Hachiko"><figcaption>Hachiko. La file, c'est pour la photo avec le chien. Vous, vous passez.</figcaption></figure></li>
         <li><span class="an">2</span><h3>Trouver l'escalator du Shibuya 109</h3><p>Le 109, c'est l'immeuble cylindrique argenté de l'autre côté du carrefour, à gauche. À son pied, un escalator descend au sous-sol B1.</p>
+          <figure class="photo"><img src="photos/109.jpg" alt="L'immeuble Shibuya 109"><figcaption>Le Shibuya 109. L'escalator vers les casiers est à sa base, côté carrefour.</figcaption></figure>
           <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+109" target="_blank" rel="noopener">Le 109 sur Plans</a></div></li>
         <li><span class="an">3</span><h3>B1 : casiers « A1 » et « B », B2 : casiers « A2 »</h3><p>En bas de l'escalator, tournez à gauche : les casiers marqués d'une lettre sont là. Les très grands (84 à 113 cm de haut, une valise de soute debout) sont les plus souvent libres, surtout les « A2 » un étage plus bas.</p></li>
         <li><span class="an">4</span><h3>Payer, garder le reçu</h3><p>Suica dans Apple Wallet, carte bancaire ou pièces. Le casier imprime un reçu avec un code ou vous donne une clé : photographiez-le tout de suite. Le prix couvre la journée.</p></li>
@@ -235,17 +250,51 @@ ul.liste li:first-child{border-top:0;padding-top:4px}
       <ol class="frise">
         <li><span class="an">10 h 00</span><h3>Arrivée à Shibuya</h3><p>Sortie Hachiko, puis les casiers du passage souterrain (étape 2). À 10 h 15 vous êtes libres.</p></li>
         <li><span class="an">10 h 20</span><h3>Le Scramble Crossing et Hachiko</h3><p>Le carrefour le plus traversé du monde, 3 000 personnes par feu vert. Montez au Starbucks du bâtiment Tsutaya pour le voir d'en haut, un café à la main.</p>
-          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Scramble+Crossing" target="_blank" rel="noopener">Sur Plans</a></div></li>
+          <figure class="photo"><img src="photos/scramble.jpg" alt="Le Scramble Crossing"><figcaption>Le carrefour vu du sol. Le Starbucks est dans l'immeuble Tsutaya, juste en face de la gare.</figcaption></figure>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Scramble+Crossing" target="_blank" rel="noopener">Sur Plans</a></div>
+          <div class="planb"><b>Plan B, si le Starbucks est bondé :</b> le Sky Lobby au 11e étage de Shibuya Hikarie (gratuit, sans réservation, collé à la gare côté est) donne la même vue plongeante sur le carrefour, sans la file.</div></li>
         <li><span class="an">11 h 00</span><h3>Shibuya Sky</h3><p>Le toit du Scramble Square, 230 mètres, à ciel ouvert. Le plus beau point de vue de Tokyo, et en fin de matinée il y a moins de monde qu'au coucher du soleil. Réservez le créneau de 11 h en ligne dans le train, les billets sur place partent vite. Sacs à dos dans les casiers du 46e.</p>
-          <div class="actions"><a class="plans" href="https://www.shibuya-scramble-square.com/sky/" target="_blank" rel="noopener">Réserver Shibuya Sky</a></div></li>
+          <figure class="photo"><img src="photos/sky.jpg" alt="Vue depuis Shibuya Sky"><figcaption>Depuis Shibuya Sky : la Tokyo Tower à droite, et par temps clair le mont Fuji à l'opposé.</figcaption></figure>
+          <div class="actions"><a class="plans" href="https://www.shibuya-scramble-square.com/sky/" target="_blank" rel="noopener">Réserver Shibuya Sky</a></div>
+          <div class="planb"><b>Plan B, si c'est complet ou couvert :</b> gardez Shibuya Sky pour un coucher de soleil plus tard dans la semaine (créneau 16 h, le plus demandé : réservez 3 jours avant). Aujourd'hui, montez au Sky Lobby de Hikarie (11e, gratuit), puis passez directement au PARCO à 11 h.</div></li>
         <li><span class="an">12 h 15</span><h3>Shibuya PARCO, 6e étage</h3><p>Le cœur geek du quartier sur un seul étage : <b>Nintendo Tokyo</b>, le <b>Pokémon Center</b>, le <b>Capcom Store</b> et le Jump Shop. À 5 minutes à pied du Scramble Square.</p>
-          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+PARCO" target="_blank" rel="noopener">Sur Plans</a></div></li>
+          <figure class="photo"><img src="photos/nintendo.jpg" alt="Nintendo Tokyo"><figcaption>Nintendo Tokyo, PARCO 6e. Le Capcom Store est à vingt mètres.</figcaption></figure>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+PARCO" target="_blank" rel="noopener">Sur Plans</a></div>
+          <div class="planb"><b>Plan B, si la file Nintendo dépasse 30 minutes :</b> faites d'abord le Capcom Store et le Pokémon Center, puis Shibuya Loft (7 étages de gadgets et de design japonais, 3 minutes à pied) et Tower Records (9 étages de musique, en face). Revenez chez Nintendo après le déjeuner, la file retombe vers 14 h.</div></li>
         <li><span class="an">13 h 30</span><h3>Déjeuner au Shibuya Yokocho</h3><p>Une ruelle de petits comptoirs sous Miyashita Park, chaque stand est une région du Japon. Ramen, gyoza, yakitori : vous choisissez à la vue. Après 13 h 30, la cohue de midi est passée.</p>
-          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Yokocho" target="_blank" rel="noopener">Sur Plans</a></div></li>
-        <li><span class="an">14 h 30</span><h3>Miyashita Park, puis Bic Camera</h3><p>Le parc sur le toit, puis Bic Camera Shibuya : sept étages de téléphones, appareils photo, gadgets et objets qu'on ne voit qu'ici. Si le temps reste, le Mega Don Quijote, le bazar ouvert 24 h/24.</p>
-          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Shibuya+Hachiko" target="_blank" rel="noopener">Sur Plans</a></div></li>
+          <figure class="photo"><img src="photos/yokocho.jpg" alt="Le Shibuya Yokocho"><figcaption>Le Yokocho, au rez-de-chaussée de Miyashita Park. Les lanternes rouges marquent l'entrée.</figcaption></figure>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Shibuya+Yokocho" target="_blank" rel="noopener">Sur Plans</a></div>
+          <div class="planb"><b>Plan B, si tout est plein :</b> Uobei Shibuya Dogenzaka, le sushi « high-tech » : vous commandez sur un écran et les assiettes arrivent sur un rail à votre place, ¥150 la paire. Vous vouliez de la tech, vous en mangerez. <b>Plan C :</b> Ichiran Shibuya, le ramen en cabine individuelle, ouvert 24 h/24.
+            <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Uobei+Shibuya+Dogenzaka" target="_blank" rel="noopener">Uobei sur Plans</a></div></div></li>
+        <li><span class="an">14 h 30</span><h3>Miyashita Park, puis Bic Camera</h3><p>Le parc sur le toit, puis Bic Camera Shibuya : sept étages de téléphones, appareils photo, gadgets et objets qu'on ne voit qu'ici. C'est là que vous pouvez prendre le 70-200 en main (section suivante). Si le temps reste, le Mega Don Quijote, le bazar ouvert 24 h/24.</p>
+          <figure class="photo"><img src="photos/miyashita.jpg" alt="Miyashita Park"><figcaption>Miyashita Park : un parc posé sur un centre commercial, le Yokocho en dessous.</figcaption></figure>
+          <div class="actions"><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Bic+Camera+Shibuya+Hachiko" target="_blank" rel="noopener">Sur Plans</a></div>
+          <div class="planb"><b>Plan B, si vous êtes à plat :</b> sautez Bic Camera (vous irez à Map Camera à Shinjuku un autre jour, c'est mieux pour l'objectif) et finissez au Mega Don Quijote : 5 étages de bazar, le Japon en concentré, et ça se visite à moitié endormi.
+            <figure class="photo"><img src="photos/donki.jpg" alt="Rayons du Don Quijote de Shibuya"><figcaption>Le Don Quijote de Shibuya. Ouvert 24 h/24, musique à fond, tout et n'importe quoi.</figcaption></figure></div></li>
         <li><span class="an">15 h 30</span><h3>Retour aux casiers</h3><p>Même chemin : escalator du 109, B1 ou B2, le code ou la clé. Puis direction l'hôtel : à 16 h vous êtes dans la chambre.</p></li>
       </ol>
+    </div>
+  </section>
+
+  <section>
+    <span class="etiquette">Le 70-200 de Sony</span>
+    <div class="verre carte">
+      <h2>L'acheter ici plutôt qu'en France : oui, à une condition</h2>
+      <p>Le <span class="mot">FE 70-200 mm F2.8 GM OSS II</span> (SEL70200GM2) est à <b>2 799 €</b> sur le store Sony France. À Tokyo, même objectif neuf, garantie Sony Japon :</p>
+      <table class="compare">
+        <tr><th>Où</th><th>Prix affiché</th><th>Après remboursement de la taxe</th></tr>
+        <tr><td>Map Camera, Shinjuku</td><td class="n">¥346&nbsp;500</td><td class="n">¥315&nbsp;000 ≈ 1 790 €</td></tr>
+        <tr><td>Bic Camera Shibuya ou Yodobashi</td><td class="n">¥385&nbsp;000</td><td class="n">¥350&nbsp;000 ≈ 1 985 €, plus 10 % en points</td></tr>
+      </table>
+      <p>Taux du jour : 1 € = 176 ¥. Soit <b>800 à 1 000 € de moins</b> qu'en France. Kakaku, le comparateur japonais, affiche des revendeurs vers ¥277&nbsp;000, mais en ligne : pas vérifié en boutique.</p>
+      <div class="franc"><b>La condition : la détaxe a changé le 1er novembre 2026.</b> Vous payez le prix plein en boutique, avec le passeport. Le remboursement des 10 % se fait à l'aéroport de départ, dans les 90 jours : à Narita le 1er décembre, avant d'enregistrer les bagages, borne « Tax-free » dans le hall des départs, passeport scanné, parfois contrôle de l'objet. Donc <b>l'objectif voyage en cabine, jamais en soute</b>. Remboursement sur la carte en 1 à 2 semaines.</div>
+      <ul class="liste">
+        <li><b>Où l'acheter.</b> Map Camera (Shinjuku, 10 minutes de Yamanote depuis Shibuya, ouvert 10 h 30 à 20 h 30) est le moins cher en neuf, et le spécialiste : ils ont aussi l'occasion notée par état. Bic Camera Shibuya est sur votre chemin aujourd'hui pour le prendre en main et vérifier le stock.</li>
+        <li><b>Ce que vous perdez.</b> La garantie est japonaise (un an, SAV au Japon). Et en rentrant en France, un achat de plus de 430 € doit en principe être déclaré en douane, avec 20 % de TVA : même déclaré, ¥315&nbsp;000 + 20 % ≈ 2 150 €, toujours sous les 2 799 €.</li>
+        <li><b>Mon avis.</b> Prenez-le à Map Camera, pas aujourd'hui : vous avez les valises et la fatigue. Un matin de cette semaine, avec le passeport. Aujourd'hui à Bic Camera, vous le testez sur votre boîtier et c'est tout.</li>
+      </ul>
+      <figure class="photo"><img src="photos/yodobashi.jpg" alt="Yodobashi Camera Shinjuku"><figcaption>Shinjuku, sortie ouest : Yodobashi, Map Camera et Kitamura sont à 5 minutes les uns des autres. Une matinée photo à part.</figcaption></figure>
+      <div class="actions"><a class="plans" href="https://www.mapcamera.com/item/4548736134119" target="_blank" rel="noopener">Map Camera, la fiche</a><a class="plans" href="https://www.google.com/maps/search/?api=1&query=Map+Camera+Shinjuku" target="_blank" rel="noopener">Map Camera sur Plans</a><a class="plans" href="https://www.mlit.go.jp/kankocho/tax-free/page01_000001_00028.html" target="_blank" rel="noopener">La règle détaxe officielle</a></div>
     </div>
   </section>
 
@@ -262,6 +311,7 @@ ul.liste li:first-child{border-top:0;padding-top:4px}
       <p class="envie" data-envie="ko">Gardez le café en haut du Scramble et le PARCO. Sautez Shibuya Sky (vous le ferez un autre soir au coucher du soleil) et Bic Camera. Après le déjeuner, Miyashita Park au soleil, puis l'hôtel dès 15 h pour demander un check-in anticipé : souvent ça passe.</p>
       <p class="envie" data-envie="moyen">Le plan tel qu'il est écrit. Une seule règle : pas de sieste avant 21 h, c'est ce qui vous cale sur l'heure du Japon dès demain.</p>
       <p class="envie" data-envie="forme">Ajoutez Harajuku : une station de la Yamanote depuis Shibuya, ou 15 minutes à pied par la rue Cat Street. Takeshita Street, puis retour par Omotesando. Et gardez Akihabara, la vraie Mecque de la tech, pour une journée entière cette semaine.</p>
+      <figure class="photo envie" data-envie="forme"><img src="photos/takeshita.jpg" alt="Harajuku dans les miroirs de Tokyu Plaza"><figcaption>Harajuku vu dans les miroirs de l'entrée de Tokyu Plaza, à Omotesando.</figcaption></figure>
     </div>
   </section>
 
@@ -279,7 +329,7 @@ ul.liste li:first-child{border-top:0;padding-top:4px}
     </div>
   </section>
 
-  <p class="pied">Préparé le 16 novembre 2026 au matin. Tarifs du train vérifiés sur le site JR East le jour même ; casiers et comptoirs : guide Navitime mis à jour en juillet 2025. Horaires d'ouverture indicatifs : PARCO 11 h, Bic Camera 10 h, Shibuya Sky 10 h.</p>
+  <p class="pied">Préparé le 16 novembre 2026 au matin. Tarifs du train vérifiés sur le site JR East le jour même ; casiers et comptoirs : guide Navitime mis à jour en juillet 2025. Horaires d'ouverture indicatifs : PARCO 11 h, Bic Camera 10 h, Shibuya Sky 10 h. Prix du 70-200 relevés le 16/11 sur mapcamera.com, biccamera.com, yodobashi.com et sony.fr ; détaxe : Agence japonaise du tourisme. Photos Wikimedia Commons : scramble : しんぎんぐきゃっと (CC BY-SA 4.0) · hachiko : Joli Rumi (CC BY-SA 4.0) · 109 : auteur non indiqué (CC BY-SA 3.0) · sky : Stephen Kelly from San Francisco, CA, USA (CC BY 2.0) · scramble-square : Benh LIEU SONG (Flickr) (CC BY-SA 2.0) · parco : Cabeza2000 (CC BY-SA 4.0) · nintendo : IagoQnsi (CC BY 4.0) · miyashita : Syced (CC0) · donki : 毒島みるく (CC0) · yokocho : 江戸村のとくぞう (CC BY-SA 4.0) · nex : 名無し野電車区 (Nanashino Denshaku) (CC BY-SA 3.0) · takeshita : Basile Morin (CC BY-SA 4.0) · yodobashi : Dick Thomas Johnson from Tokyo, Japan (CC BY 2.0)</p>
 </main>
 <script>
 document.querySelectorAll('.puce').forEach(function(b){b.addEventListener('click',function(){var k=b.dataset.envie;document.querySelectorAll('.puce').forEach(function(x){x.classList.toggle('on',x===b)});document.querySelectorAll('.envie').forEach(function(p){p.classList.toggle('vu',p.dataset.envie===k)})})});
