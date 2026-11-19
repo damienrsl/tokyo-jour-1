@@ -16,25 +16,28 @@
  --pan:#285FFF;--pan-2:#0041FF;--pan-3:#2436b8;--encre:#0b0f24;
  --bleu-chat:#2f6be0;--bleu-cheval:#4fa8f7;--bleu-renard:#2436b8;--bleu-requin:#0c1462;
  --r-s:10px;--r-m:16px;--r-l:22px;--r-xl:28px;--r-pilule:999px;--ressort:cubic-bezier(.34,1.4,.64,1);
- --bruit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+ --bruit:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1.4 -.45'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+ --bruit-doux:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 .42 -.135'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
 html,body{background:#fff}
 body{font-family:var(--police);color:var(--texte);-webkit-font-smoothing:antialiased;line-height:1.5}
 h1,h2{font-family:var(--police);font-weight:600}
 h1{font-family:var(--large)}
 b,strong{font-weight:600}
 main{position:relative;z-index:1}
-.auras{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict}
-.auras i{position:absolute;border-radius:50%;filter:blur(40px);will-change:transform;
- background:radial-gradient(circle,#000 0 10%,#0a1a66 21%,#0041FF 32%,#285FFF 44%,#6f93ff 53%,#8AA8FF 60%,#B6C9FF 65%,rgba(182,201,255,.5) 70%,rgba(182,201,255,.14) 74%,transparent 78%);
- animation:auraDerive1 38s ease-in-out infinite alternate}
-.auras i:nth-child(1){width:min(145vw,1150px);height:min(145vw,1150px);left:20%;top:30%}
-.auras i:nth-child(2){width:min(105vw,860px);height:min(105vw,860px);left:45%;top:-10%;animation-name:auraDerive2;animation-duration:46s}
-.auras i:nth-child(3){width:min(95vw,760px);height:min(95vw,760px);left:-5%;top:35%;animation-name:auraDerive3;animation-duration:52s}
-.auras::after{content:"";position:absolute;inset:0;opacity:.3;mix-blend-mode:overlay;background-image:var(--bruit);background-size:160px}
+/* 20/11 (bug de défilement) : plus de filter:blur ni de mix-blend-mode. Les 3 auras + le grain sont de simples calques de fond peints UNE fois
+   (radial-gradient adoucis + grain fusionné par background-blend-mode). Avant : flou GPU + overlay recomposés à chaque image → GPU saturé,
+   contenu qui disparaît au scroll (enregistrement de Damien du 20/11, 00h28). Le HTML <div class="auras"><i></i>×3 reste valable, les <i> sont cachés. */
+.auras{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;contain:strict;
+ --aura:radial-gradient(circle closest-side,#000 0 10%,#0a1a66 21%,#0041FF 32%,#285FFF 44%,#6f93ff 53%,#8AA8FF 60%,#B6C9FF 65%,rgba(182,201,255,.5) 70%,rgba(182,201,255,.14) 75%,rgba(182,201,255,0) 80%);
+ background-image:var(--bruit-doux),var(--aura),var(--aura),var(--aura);
+ background-size:160px 160px,min(145vw,1150px) min(145vw,1150px),min(105vw,860px) min(105vw,860px),min(95vw,760px) min(95vw,760px);
+ background-position:0 0,20vw 30vh,45vw -10vh,-5vw 35vh;
+ background-repeat:repeat,no-repeat,no-repeat,no-repeat;
+ background-blend-mode:overlay,normal,normal,normal}
+.auras i,.auras::after{display:none}
 @keyframes auraDerive1{0%{transform:translate(-45%,40%)}50%{transform:translate(10%,20%)}100%{transform:translate(40%,55%)}}
 @keyframes auraDerive2{0%{transform:translate(35%,-40%)}100%{transform:translate(-5%,-10%)}}
 @keyframes auraDerive3{0%{transform:translate(-60%,-10%)}100%{transform:translate(-15%,15%)}}
-.auras i{animation:none}   /* 14/11 : auras FIGÉES. Leur dérive (38-52 s) recomposait tout l'écran à chaque image (flou + grain) : GPU Chrome à 65 %, défilement en tuiles blanches sur le Mac de Damien. */
 .verre{background:linear-gradient(180deg,rgba(255,255,255,.9),rgba(255,255,255,.8));border:1px solid rgba(255,255,255,.85);border-radius:var(--r-xl);
  box-shadow:inset 0 1px 0 #fff,0 0 0 .5px rgba(20,20,40,.06),0 10px 30px -14px rgba(20,30,90,.35)}
 .etiquette{font:600 11px var(--police-mono);letter-spacing:.09em;text-transform:uppercase;color:var(--texte-2)}
